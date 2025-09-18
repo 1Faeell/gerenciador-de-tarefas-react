@@ -18,8 +18,8 @@ function Tasks({ tasks, onTaskClick, onDeleteTaskClick }) {
         <li key={task.id} className="flex gap-2">
           <button
             onClick={() => onTaskClick(task.id)}
-            className={`bg-gray-700 text-left w-full text-white p-5 rounded overflow-x-hidden ${
-              task.isCompleted ? "line-through text-gray-400 bg-gray-800" : ""
+            className={`bg-gray-700 text-left w-full text-white p-5 rounded break-all ${
+              task.isCompleted ? "line-through text-gray-500 bg-gray-800" : ""
             }`}
           >
             {task.title}
@@ -31,7 +31,7 @@ function Tasks({ tasks, onTaskClick, onDeleteTaskClick }) {
             <ChevronRightIcon />
           </Button>
           <Button
-            className=" p-4 bg-red-400 hover:bg-red-500 rounded-md shadow"
+            className=" p-4 bg-red-400 hover:bg-red-500 rounded-md shadow transition"
             onClick={() => onDeleteTaskClick(task.id)}
           >
             <Trash2Icon />

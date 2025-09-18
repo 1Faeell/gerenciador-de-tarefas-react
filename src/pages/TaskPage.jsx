@@ -9,12 +9,12 @@ function TaskPage() {
   const description = searchParams.get("description");
 
   return (
-    <div className="h-screen w-screen bg-gray-900 p-6 flex justify-center">
+    <div className="h-screen w-screen bg-gray-900 p-6 flex justify-center min-w-full">
       <div className="w-[500px] space-y-4">
         <div className="flex justify-center align-middle relative">
           <button
             onClick={() => navigate(-1)}
-            className="absolute left-0 top-0 bg-gray-700 text-white p-4 rounded-md"
+            className="absolute left-0 top-0 text-white bg-gray-700 hover:opacity-80 transition p-4 rounded-md"
           >
             <ChevronLeftIcon />
           </button>
@@ -22,10 +22,10 @@ function TaskPage() {
           <Title>Detalhes da Tarefa</Title>
         </div>
         <div className="p-6 bg-gray-700 rounded-md shadow space-y-4">
-          <h2 className="text-white text-xl font-bold text-center shadow-xl p-4 rounded-md">
+          <h2 className="text-white text-xl font-bold text-center shadow-xl p-4 rounded-md break-words">
             {title}
           </h2>
-          <p className=" bg-gray-600 text-gray-200 rounded-md p-4 shadow-inner">
+          <p className=" bg-gray-600 text-gray-200 rounded-md p-4 shadow-inner break-words">
             {description}
           </p>
         </div>
