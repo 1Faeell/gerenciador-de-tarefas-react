@@ -21,7 +21,7 @@ function AddTask({ onAddTaskSubmit }) {
         onChange={(e) => setDescription(e.target.value)}
       />
       <button
-        className="w-full p-2 bg-gray-500 text-white rounded-md shadow hover:bg-gray-400 transition "
+        className="w-full p-2 bg-gray-500 text-white rounded-md shadow hover:bg-gray-400 transition"
         onClick={() => {
           if (!title.trim() || !description.trim()) {
             return alert("Por favor, preencha todos os campos");
