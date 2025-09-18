@@ -52,8 +52,8 @@ function App() {
   }
 
   return (
-    <div className="w-screen min-h-screen flex justify-center p-6 bg-gray-900 text-white">
-      <div className="max-w-[500px] w-full space-y-4">
+    <div className="w-screen min-h-screen flex justify-center p-6 bg-gradient-to-b from-gray-950 via-gray-900 to-gray-800 text-white">
+      <div className="max-w-[500px] w-full space-y-3">
         <Title>Gerenciador de Tarefas</Title>
         <AddTask onAddTaskSubmit={onAddTaskSubmit} />
         <Tasks
@@ -67,60 +67,3 @@ function App() {
 }
 
 export default App;
-
-// import { useState } from "react";
-
-// function Contador() {
-//   const [count, setCount] = useState(0);
-
-//   return (
-//     <div>
-//       <h1>Contagem: {count}</h1>
-//       <button onClick={() => setCount(count + 1)}>Incrementar (+)</button>
-//       <button onClick={() => setCount(count - 1)}>Decrementar (-)</button>
-//     </div>
-//   );
-// }
-
-// function Saudacao() {
-//   const [novoNome, setNovoNome] = useState("Visitante");
-//   const [novaIdade, setNovaIdade] = useState("Indefinida");
-
-//   return (
-//     <>
-//       <h1>Olá, {novoNome}!</h1>
-//       <h2>Sua idade é: {novaIdade}</h2>
-//       <div className="container-inputs">
-//         <input placeholder="Digite seu nome" className="input-nome" />
-//         <br />
-//         <input placeholder="Digite sua idade" className="input-idade" />
-//         <button
-//           className="btn-atualizar"
-//           onClick={() => {
-//             const nomeInput = document.querySelector(".input-nome");
-//             const idadeInput = document.querySelector(".input-idade");
-
-//             setNovoNome(nomeInput.value);
-//             setNovaIdade(idadeInput.value);
-
-//             nomeInput.value === "" ? setNovoNome("Visitante") : null;
-//             idadeInput.value === "" ? setNovaIdade("Indefinida") : null;
-//           }}
-//         >
-//           Atualizar
-//         </button>
-//       </div>
-//     </>
-//   );
-// }
-
-// function App() {
-//   return (
-//     <div>
-//       <Contador />
-//       <Saudacao />
-//     </div>
-//   );
-// }
-
-// export default App;
